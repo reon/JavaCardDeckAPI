@@ -55,6 +55,7 @@ public class DeckResource {
 	 *            contains the name of the deck to shuffle
 	 * @return String indicating success or failure
 	 */
+	@Path("/shuffle")
 	@POST
 	@Consumes({ MediaType.APPLICATION_JSON })
 	@Produces({ MediaType.TEXT_PLAIN })
@@ -114,11 +115,10 @@ public class DeckResource {
 	 *            contains the name of the deck to delete
 	 * @return String indicating success or failure
 	 */
+	@Path("{deckName}")
 	@DELETE
-	@Consumes({ MediaType.APPLICATION_JSON })
 	@Produces({ MediaType.TEXT_PLAIN })
-	public Response deleteDeck(DeckRequest deckRequest) {
-		String deckName = deckRequest.getName();
+	public Response deleteDeck(@PathParam("deckName") String deckName) {
 		ResponseBuilder builder = Response.status(Status.OK).entity("Success").type(MediaType.TEXT_PLAIN);
 		if (!MemoryDeckData.getInstance().deleteDeck(deckName)) {
 			builder = Response.status(Status.INTERNAL_SERVER_ERROR).entity("There was an issue deleting the deck")
