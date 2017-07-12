@@ -11,8 +11,8 @@ This is a Gradle project that builds a microservice to be run in Jetty. The main
 ## Build/Deploy instructions
 * Clone repository to local workspace
 * Make sure that Gradle and Jetty are installed
-* Execute "gradle build" at the root of the project
-* Copy build/libs/java-card-deck-api.war to your Jetty webapps directory. For example, I used the following command from the root direclty of the project: "sudo cp build/libs/java-card-deck-api.war /usr/share/jetty9/webapps"
+* Execute "gradle build" at the root of the project (this generates the war file and executes the unit tests)
+* Copy build/libs/java-card-deck-api.war to your Jetty webapps directory. (I used the following command from the root direclty of the project: "sudo cp build/libs/java-card-deck-api.war /usr/share/jetty9/webapps")
 * Start or restart Jetty service (I used the following in my dev VM: sudo service jetty9 restart)
 
 ## Scope reduction
