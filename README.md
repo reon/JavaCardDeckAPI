@@ -16,4 +16,4 @@ This is a Gradle project that builds a microservice to be run in Jetty. The main
 * Start or restart Jetty service
 
 ## Scope reduction
-Due to time restraints, I decided to reduce the scope of this project and not implement additional functionality regarding the shuffle algorithm.
+Due to time restraints, I decided to reduce the scope of this project and not implement additional functionality regarding the shuffle functionality. I didn't define a custom shuffle algorithm, to simulate a more realistic shuffle, and I didn't make the shuffle algorithm configurable at runtime.
