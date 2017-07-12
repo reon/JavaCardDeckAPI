@@ -3,10 +3,10 @@ This is a Gradle project that builds a microservice to be run in Jetty. The main
 
 ## API routes
 * **PUT /deck** - accepts a JSON body containing the name to use in the creation of a new deck
-* **POST /deck** - accepts a JSON body containing the name of the deck to shuffle
+* **POST /deck/shuffle** - accepts a JSON body containing the name of the deck to shuffle
 * **GET /deck/list** - returns a list of the names of all of the saved decks
 * **GET /deck/{deckName}** - returns the deck of cards corresponding to the name provided in the URL
-* **DELETE /deck** - accepts a JSON body containing the name of the deck to be deleted
+* **DELETE /deck/{deckName}** - deletes the deck of cards which has the provided name
 
 ## Build/Deploy instructions
 * Clone repository to local workspace
